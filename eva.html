@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vasaborgen</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f4f4f9;
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #3a6351;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #3a6351;
+      border-bottom: 2px solid #e9ecef;
+      padding-bottom: 0.5rem;
+    }
+    .section p {
+      margin: 0.5rem 0;
+    }
+    .gallery img {
+      width: 100%;
+      max-height: 500px; /* Increased height */
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #3a6351;
+      color: white;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="headerTitle">Vasaborgen</h1>
+    <nav>
+        <a id="navEnglish" href="#" onclick="setLanguage('en'); return false;">English</a>
+        <a id="navSvenska" href="#" onclick="setLanguage('sv'); return false;">Svenska</a>
+        <a id="navHistory" href="#history">History</a>
+      </nav>
+      
+  </header>
+
+  <div class="container">
+    <!-- About Section -->
+    <div class="section">
+      <h2 id="aboutTitle">About Vasaborgen</h2>
+      <p id="aboutPara1">
+        Vasaborgen is a historical building located at Stockholmsvägen 60, in the Hersby area of Lidingö. Originally constructed in 1923, this building has undergone several transformations over the years, adapting to the changing needs of the community while retaining its historical charm. The building is known for its distinct architectural features, including a classicist facade and marked corners.
+      </p>
+      <p id="aboutPara2">
+        Vasaborgen has served multiple purposes since its construction. Initially built as a private residence, it later accommodated a variety of businesses, including a cinema, post office, and police facilities. Over the years, it has remained a significant landmark in Lidingö, recognized for its contribution to the area's cultural and architectural heritage.
+      </p>
+    </div>
+
+    <!-- History Section -->
+    <div id="history" class="section">
+      <h2 id="historyTitle">The Story of Vasaborgen</h2>
+      <p id="historyPara1">
+        Vasaborgen is a historic building located on Lidingö, Sweden. Constructed in 1923, it was designed by architect <a href="https://sv.wikipedia.org/wiki/Anton_Wallby">Anton Wallby</a> in a classicist style, with a plastered facade and distinct corners. Initially, it was a private residence, and over time, the building has had several different uses.
+      </p>
+      <p id="historyPara2">
+        For many years, Vasaborgen served as a home for multiple families. In the 1920s, it housed a cinema in the basement, which operated until 1962. The building also accommodated local businesses, including a post office, a laundry and ironing service, police facilities with an arrest, and even a gingerbread bakery that filled the area with delightful aromas.
+      </p>
+      <p id="historyPara3">
+        The park adjacent to Vasaborgen, Hästskojarparken, was created around the same time as the building, featuring a sculpture named "Hästskojaren" by Lidingö artist Sven Lundqvist, installed in 2009.
+      </p>
+      <p id="historyPara4">
+        Today, Vasaborgen is a significant landmark on Lidingö, reflecting the island’s architectural heritage and its evolution over the past century. Despite the changes over the years, it continues to play an integral role in the local community, blending its historical charm with the modern developments of the area.
+      </p>
+    </div>
+
+    <!-- Photo Gallery Section -->
+    <div class="section gallery">
+      <h2 id="galleryTitle">Gallery</h2>
+      <img src="placeholder.jpg" alt="Exterior view of Vasaborgen" />
+    </div>
+
+    <!-- Location Section -->
+    <div class="section">
+      <h2 id="locationTitle">Location</h2>
+      <p id="locationPara">
+        Vasaborgen is located at Stockholmsvägen 60, in the Hersby area of Lidingö.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p id="footerText">&copy; 2025 Vasaborgen | Website created by Elias Nygren</p>
+  </footer>
+
+  <script>
+    // Translation dictionary
+    const translations = {
+      en: {
+        headerTitle: "Vasaborgen",
+        navEnglish: "English",
+        navSvenska: "Svenska",
+        navHistory: "History",
+        aboutTitle: "About Vasaborgen",
+        aboutPara1: "Vasaborgen is a historical building located at Stockholmsvägen 60, in the Hersby area of Lidingö. Originally constructed in 1923, this building has undergone several transformations over the years, adapting to the changing needs of the community while retaining its historical charm. The building is known for its distinct architectural features, including a classicist facade and marked corners.",
+        aboutPara2: "Vasaborgen has served multiple purposes since its construction. Initially built as a private residence, it later accommodated a variety of businesses, including a cinema, post office, and police facilities. Over the years, it has remained a significant landmark in Lidingö, recognized for its contribution to the area's cultural and architectural heritage.",
+        historyTitle: "The Story of Vasaborgen",
+        historyPara1: "Vasaborgen is a historic building located on Lidingö, Sweden. Constructed in 1923, it was designed by architect Anton Wallby in a classicist style, with a plastered facade and distinct corners. Initially, it was a private residence, and over time, the building has had several different uses.",
+        historyPara2: "For many years, Vasaborgen served as a home for multiple families. In the 1920s, it housed a cinema in the basement, which operated until 1962. The building also accommodated local businesses, including a post office, a laundry and ironing service, police facilities with an arrest, and even a gingerbread bakery that filled the area with delightful aromas.",
+        historyPara3: "The park adjacent to Vasaborgen, Hästskojarparken, was created around the same time as the building, featuring a sculpture named \"Hästskojaren\" by Lidingö artist Sven Lundqvist, installed in 2009.",
+        historyPara4: "Today, Vasaborgen is a significant landmark on Lidingö, reflecting the island’s architectural heritage and its evolution over the past century. Despite the changes over the years, it continues to play an integral role in the local community, blending its historical charm with the modern developments of the area.",
+        galleryTitle: "Gallery",
+        locationTitle: "Location",
+        locationPara: "Vasaborgen is located at Stockholmsvägen 60, in the Hersby area of Lidingö.",
+        footerText: "&copy; 2025 Vasaborgen | Website created by Elias Nygren"
+      },
+      sv: {
+        headerTitle: "Vasaborgen",
+        navEnglish: "English",
+        navSvenska: "Svenska",
+        navHistory: "Historia",
+        aboutTitle: "Om Vasaborgen",
+        aboutPara1: "Vasaborgen är en historisk byggnad belägen vid Stockholmsvägen 60, i Hersby-området på Lidingö. Byggnaden uppfördes ursprungligen 1923 och har genomgått flera omvandlingar genom åren, anpassat sig till samhällets föränderliga behov samtidigt som den bevarar sin historiska charm. Byggnaden är känd för sina distinkta arkitektoniska drag, inklusive en klassicistisk fasad och markerade hörn.",
+        aboutPara2: "Sedan uppförandet har Vasaborgen haft flera olika funktioner. Ursprungligen byggd som en privatbostad, har den senare rymt en rad olika verksamheter, inklusive en biograf, ett postkontor och polisfaciliteter. Genom åren har den förblivit ett viktigt landmärke på Lidingö, erkänd för sitt bidrag till områdets kulturella och arkitektoniska arv.",
+        historyTitle: "Vasaborgens historia",
+        historyPara1: "Vasaborgen är en historisk byggnad belägen på Lidingö, Sverige. Byggd 1923, designades den av arkitekten Anton Wallby i en klassicistisk stil med en putsad fasad och distinkta hörn. Ursprungligen var den en privatbostad, och med tiden har byggnaden haft flera olika användningsområden.",
+        historyPara2: "Under många år var Vasaborgen hem för flera familjer. På 1920-talet hade den en biograf i källaren, som var verksam fram till 1962. Byggnaden rymde även lokala företag, inklusive ett postkontor, en tvätt- och strykservice, polisfaciliteter samt ett pepparkaksbageri som spred underbara dofter i området.",
+        historyPara3: "Parken intill Vasaborgen, Hästskojarparken, skapades ungefär samtidigt som byggnaden, och där finns skulpturen \"Hästskojaren\" av Lidingökonstnären Sven Lundqvist, installerad 2009.",
+        historyPara4: "Idag är Vasaborgen ett betydande landmärke på Lidingö, som speglar öns arkitektoniska arv och utvecklingen under det senaste århundradet. Trots förändringarna genom åren spelar den fortfarande en integrerad roll i det lokala samhället, där den blandar sin historiska charm med moderna utvecklingar.",
+        galleryTitle: "Galleri",
+        locationTitle: "Plats",
+        locationPara: "Vasaborgen är belägen vid Stockholmsvägen 60, i Hersby-området på Lidingö.",
+        footerText: "&copy; 2025 Vasaborgen | Webbplats skapad av Elias Nygren"
+      }
+    };
+
+    // Function to update text content based on language selection
+    function setLanguage(lang) {
+      const texts = translations[lang];
+
+      // Update header
+      document.getElementById("headerTitle").innerHTML = texts.headerTitle;
+      document.getElementById("navEnglish").innerHTML = texts.navEnglish;
+      document.getElementById("navSvenska").innerHTML = texts.navSvenska;
+      document.getElementById("navHistory").innerHTML = texts.navHistory;
+
+      // Update About section
+      document.getElementById("aboutTitle").innerHTML = texts.aboutTitle;
+      document.getElementById("aboutPara1").innerHTML = texts.aboutPara1;
+      document.getElementById("aboutPara2").innerHTML = texts.aboutPara2;
+
+      // Update History section
+      document.getElementById("historyTitle").innerHTML = texts.historyTitle;
+      document.getElementById("historyPara1").innerHTML = texts.historyPara1;
+      document.getElementById("historyPara2").innerHTML = texts.historyPara2;
+      document.getElementById("historyPara3").innerHTML = texts.historyPara3;
+      document.getElementById("historyPara4").innerHTML = texts.historyPara4;
+
+      // Update Gallery section
+      document.getElementById("galleryTitle").innerHTML = texts.galleryTitle;
+
+      // Update Location section
+      document.getElementById("locationTitle").innerHTML = texts.locationTitle;
+      document.getElementById("locationPara").innerHTML = texts.locationPara;
+
+      // Update Footer
+      document.getElementById("footerText").innerHTML = texts.footerText;
+
+      // Update the lang attribute of the document
+      document.documentElement.lang = lang;
+    }
+
+    // Set default language to English on page load
+    window.onload = function () {
+      setLanguage("en");
+    };
+  </script>
+</body>
+</html>
